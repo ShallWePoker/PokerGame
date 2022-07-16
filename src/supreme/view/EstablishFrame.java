@@ -17,15 +17,39 @@ public class EstablishFrame extends JFrame {
         contentPane.setLayout(null);
         setLocationRelativeTo(null);
 
-        JLabel text = new JLabel("房间密码");
-        text.setFont(new Font("微软雅黑", Font.BOLD, 14));
-        text.setBounds(40,80,100,40);
-        contentPane.add(text);
+        JLabel password = new JLabel("房间密码");
+        password.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        password.setBounds(40,80,100,40);
+        contentPane.add(password);
 
         JTextField jTextField = new JTextField();
         jTextField.setFont(new Font("微软雅黑", Font.BOLD, 14));
         jTextField.setBounds(100,90,100,25);
         contentPane.add(jTextField);
+
+        JLabel blinds = new JLabel("盲注级别");
+        blinds.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        blinds.setBounds(40,130,100,40);
+        contentPane.add(blinds);
+
+        JComboBox blindsBox = new JComboBox();
+        blindsBox.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        blindsBox.setBounds(100,140,100,25);
+        blindsBox.addItem("1/2");
+        blindsBox.addItem("2/4");
+        blindsBox.addItem("5/10");
+        blindsBox.addItem("10/20");
+        contentPane.add(blindsBox);
+
+        JLabel buyin = new JLabel("带入筹码");
+        buyin.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        buyin.setBounds(40,180,100,40);
+        contentPane.add(buyin);
+
+        JTextField buyinTxt = new JTextField();
+        buyinTxt.setFont(new Font("微软雅黑", Font.BOLD, 14));
+        buyinTxt.setBounds(100,190,100,25);
+        contentPane.add(buyinTxt);
 
         JButton btnestbilish = new JButton("创建");
         btnestbilish.addActionListener(new ActionListener() {
@@ -63,6 +87,7 @@ public class EstablishFrame extends JFrame {
 
     //返回按钮
     private void returnButton(ActionEvent e) {
+
         this.setVisible(false);
     }
 
